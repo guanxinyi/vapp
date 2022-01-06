@@ -4,7 +4,7 @@
  * @Author: guanxiaoxin
  * @Date: 2021-12-29 14:21:06
  * @LastEditors: guanxiaoxin
- * @LastEditTime: 2021-12-29 17:19:34
+ * @LastEditTime: 2021-12-30 15:12:28
  * @FilePath: /guan_f/lib/login_demo.dart
  */
 
@@ -21,15 +21,18 @@ class login extends StatelessWidget {
       ),
       body: ElevatedButton(
         onPressed: () async {
-          var result = await Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) {
-              return menu();
-            },
-            settings: RouteSettings(),
-            maintainState: false,
-            fullscreenDialog: false,
-          ));
-          print(result);
+          Navigator.of(context).pushNamed('menu', arguments: "gxy");
+          // var result = await Navigator.of(context).push(MaterialPageRoute(
+          //   builder: (context) {
+          //     return menu();
+          //   },
+          //   settings: RouteSettings(
+          //     arguments: "11123wwww",
+          //   ),
+          //   maintainState: false,
+          //   fullscreenDialog: false,
+          // ));
+          // print(result);
         },
         child: Text('提交'),
       ),
@@ -38,19 +41,20 @@ class login extends StatelessWidget {
 }
 
 class menu extends StatelessWidget {
-  const menu({Key key}) : super(key: key);
-
+  // final String title;
+  // const menu({Key key, @required this.title}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    dynamic a = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
-        title: Text('菜单'),
+        title: Text(a),
       ),
       body: Column(
         children: [
           ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pop('gxyhhhhhh');
+                Navigator.of(context).pop();
               },
               child: Text('返回'))
         ],

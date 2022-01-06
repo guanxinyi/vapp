@@ -1,163 +1,199 @@
 import 'package:flutter/material.dart';
 
-import 'login_demo.dart';
+import 'bottom_demo2.dart';
 
 void main(List<String> args) {
-  runApp(MyApp());
+  runApp(myApp());
 }
 
-class MyApp extends StatelessWidget {
-  // const MyApp({ Key? key }) : super(key: key);
+class myApp extends StatelessWidget {
+  const myApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'guan',
       debugShowCheckedModeBanner: false,
-      home: login(),
+      home: bottomApp(),
     );
   }
 }
 
-class TextPage extends StatelessWidget {
-  // const MyApp({ Key? key }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      color: Colors.green,
-      child: Text(
-        "文本",
-        maxLines: 1,
-        overflow: TextOverflow.fade,
-        textDirection: TextDirection.ltr,
-        textAlign: TextAlign.center,
-        style: TextStyle(color: Colors.white),
-      ),
-    );
-  }
-}
 
-class Homepage extends StatelessWidget {
-  // const Homepage({ Key? key }) : super(key: key);
-//
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('xqq'),
-        elevation: 10.0,
-        centerTitle: true,
-      ),
-      body: InputDemo(),
-    );
-  }
-}
+// void main(List<String> args) {
+//   runApp(MyApp());
+// }
 
-class Buttom extends StatelessWidget {
-  // const Buttom({ Key? key }) : super(key: key);
+// class MyApp extends StatelessWidget {
+//   // const MyApp({ Key? key }) : super(key: key);
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       routes: {
+//         "/": (context) => login(),
+//         // "menu": (context) => menu(),
+//       },
+//       // initialRoute: "menu",
+//       // home: login(),
+//       onGenerateRoute: (RouteSettings s) {
+//         switch (s.name) {
+//           case "menu":
+//             return MaterialPageRoute(
+//                 builder: (context) {
+//                   return menu();
+//                 },
+//                 settings: s);
+//             break;
+//           default:
+//             break;
+//         }
+//       },
+//     );
+//   }
+// }
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        RaisedButton(
-          onPressed: () {},
-          child: Text('破啊皮肤'),
-        ),
-        FlatButton(onPressed: () {}, child: Text('扁平按钮')),
-        RaisedButton.icon(
-          onPressed: () {},
-          icon: Icon(Icons.add),
-          label: Text('label'),
-          color: Colors.green,
-          textColor: Colors.white,
-        ),
-        IconButton(onPressed: () {}, icon: Icon(Icons.account_box))
-      ],
-    );
-  }
-}
+// class TextPage extends StatelessWidget {
+//   // const MyApp({ Key? key }) : super(key: key);
 
-class ImageIconDemo extends StatelessWidget {
-  // const ImageIconDemo({ Key? key }) : super(key: key);
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container(
+//       width: double.infinity,
+//       color: Colors.green,
+//       child: Text(
+//         "文本",
+//         maxLines: 1,
+//         overflow: TextOverflow.fade,
+//         textDirection: TextDirection.ltr,
+//         textAlign: TextAlign.center,
+//         style: TextStyle(color: Colors.white),
+//       ),
+//     );
+//   }
+// }
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(children: [
-      Icon(Icons.add),
-      IconButton(
-          onPressed: () {
-            print(111111);
-          },
-          icon: Icon(Icons.home)),
-      // Image.network("http://81.71.24.172:889/img/photo1.jpg")
-    ]);
-  }
-}
+// class Homepage extends StatelessWidget {
+//   // const Homepage({ Key? key }) : super(key: key);
+// //
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('xqq'),
+//         elevation: 10.0,
+//         centerTitle: true,
+//       ),
+//       body: InputDemo(),
+//     );
+//   }
+// }
 
-// import 'package:flutter/material.dart';
+// class Buttom extends StatelessWidget {
+//   // const Buttom({ Key? key }) : super(key: key);
 
-// void main() => runApp(MyApp());
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       children: <Widget>[
+//         RaisedButton(
+//           onPressed: () {},
+//           child: Text('破啊皮肤'),
+//         ),
+//         FlatButton(onPressed: () {}, child: Text('扁平按钮')),
+//         RaisedButton.icon(
+//           onPressed: () {},
+//           icon: Icon(Icons.add),
+//           label: Text('label'),
+//           color: Colors.green,
+//           textColor: Colors.white,
+//         ),
+//         IconButton(onPressed: () {}, icon: Icon(Icons.account_box))
+//       ],
+//     );
+//   }
+// }
 
-class InputDemo extends StatefulWidget {
-  InputDemo({Key key}) : super(key: key);
+// class ImageIconDemo extends StatelessWidget {
+//   // const ImageIconDemo({ Key? key }) : super(key: key);
 
-  @override
-  _InputDemoState createState() => _InputDemoState();
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(children: [
+//       Icon(Icons.add),
+//       IconButton(
+//           onPressed: () {
+//             print(111111);
+//           },
+//           icon: Icon(Icons.home)),
+//       // Image.network("http://81.71.24.172:889/img/photo1.jpg")
+//     ]);
+//   }
+// }
 
-class _InputDemoState extends State<InputDemo> {
-  GlobalKey _key = GlobalKey<FormState>();
-  TextEditingController _controller = TextEditingController();
+// // import 'package:flutter/material.dart';
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
+// // void main() => runApp(MyApp());
 
-  @override
-  void dispose() {
-    // TODO: implement dispose
-    super.dispose();
-    _controller.dispose();
-  }
+// class InputDemo extends StatefulWidget {
+//   InputDemo({Key key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Form(
-      key: _key,
-      child: Column(
-        children: [
-          TextField(
-            controller: _controller,
-            decoration: InputDecoration(
-                prefixIcon: Icon(Icons.add), labelText: '请输入', hintText: 'xqq'),
-          ),
-          SizedBox(
-            height: 8,
-          ),
-          TextField(
-            controller: _controller,
-            decoration: InputDecoration(
-                prefixIcon: Icon(Icons.add), labelText: '请输入', hintText: 'xqq'),
-            obscureText: true,
-          ),
-          SizedBox(
-            height: 16,
-          ),
-          ElevatedButton(
-            onPressed: () {
-              print(_controller.selection);
-            },
-            child: Text('submit'),
-          )
-        ],
-      ),
-    );
-  }
-}
+//   @override
+//   _InputDemoState createState() => _InputDemoState();
+// }
+
+// class _InputDemoState extends State<InputDemo> {
+//   GlobalKey _key = GlobalKey<FormState>();
+//   TextEditingController _controller = TextEditingController();
+
+//   @override
+//   void initState() {
+//     // TODO: implement initState
+//     super.initState();
+//   }
+
+//   @override
+//   void dispose() {
+//     // TODO: implement dispose
+//     super.dispose();
+//     _controller.dispose();
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Form(
+//       key: _key,
+//       child: Column(
+//         children: [
+//           TextField(
+//             controller: _controller,
+//             decoration: InputDecoration(
+//                 prefixIcon: Icon(Icons.add), labelText: '请输入', hintText: 'xqq'),
+//           ),
+//           SizedBox(
+//             height: 8,
+//           ),
+//           TextField(
+//             controller: _controller,
+//             decoration: InputDecoration(
+//                 prefixIcon: Icon(Icons.add), labelText: '请输入', hintText: 'xqq'),
+//             obscureText: true,
+//           ),
+//           SizedBox(
+//             height: 16,
+//           ),
+//           ElevatedButton(
+//             onPressed: () {
+//               print(_controller.selection);
+//             },
+//             child: Text('submit'),
+//           )
+//         ],
+//       ),
+//     );
+//   }
+// }
 
 // class MywApp extends StatelessWidget {
 //   // This widget is the root of your application.
