@@ -4,13 +4,13 @@
  * @Author: guanxiaoxin
  * @Date: 2022-01-06 11:42:54
  * @LastEditors: guanxiaoxin
- * @LastEditTime: 2022-01-06 16:53:47
+ * @LastEditTime: 2022-01-07 17:03:07
  * @FilePath: /guan_f/lib/bottom_demo2.dart
  */
 
 import 'package:flutter/material.dart';
 import 'each_view.dart';
-import 'title.dart';
+import 'guan_topDemo.dart';
 
 class bottomApp extends StatefulWidget {
   bottomApp({Key key}) : super(key: key);
@@ -39,7 +39,7 @@ class _bottomAppState extends State<bottomApp> {
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(
                 builder: (BuildContext context) {
-                  return title();
+                  return topDemo();
                 },
                 fullscreenDialog: true));
           },

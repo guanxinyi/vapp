@@ -1,3 +1,12 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: guanxiaoxin
+ * @Date: 2021-12-28 10:33:01
+ * @LastEditors: guanxiaoxin
+ * @LastEditTime: 2022-01-10 13:59:52
+ * @FilePath: /guan_f/test/widget_test.dart
+ */
 // This is a basic Flutter widget test.
 //
 // To perform an interaction with a widget in your test, use the WidgetTester
@@ -7,8 +16,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:guan_f/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
